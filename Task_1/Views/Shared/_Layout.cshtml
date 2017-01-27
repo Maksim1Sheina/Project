@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- Rename standart title in our -->
+    <title>@ViewBag.Title - Sheina M. Task_1 - Contoso University</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,13 +17,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <!-- Rename home link from ASP.NET in our -->
+                @Html.ActionLink("Sheina M. Task_1 - Contoso University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" style="float: left">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                <!-- Add some new links for manage school work -->
+                <ul class="nav navbar-nav" style="float: right">
+                    <li>@Html.ActionLink("Students", "Index", "Student")</li>
+                    <li>@Html.ActionLink("Courses", "Index", "Course")</li>
+                    <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
+                    <li>@Html.ActionLink("Departments", "Index", "Department")</li>
                 </ul>
             </div>
         </div>
@@ -31,7 +40,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <!-- Rename footer -->
+            <p>&copy; @DateTime.Now.Year - Sheina M. Task_1 - Contoso University</p>
         </footer>
     </div>
 

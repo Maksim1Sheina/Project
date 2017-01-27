@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Task_1.Data_Access_Layer;
+using System.Data.Entity.Infrastructure.Interception;
 
 namespace Task_1
 {
@@ -16,6 +18,9 @@ namespace Task_1
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            DbInterception.Add(new SchoolInterceptorTransientErrors());
+            DbInterception.Add(new SchoolInterceptorLogging());
         }
     }
 }
