@@ -16,7 +16,8 @@ namespace Task_1.Models
         [Required(AllowEmptyStrings = false)]
         [StringLength(50, ErrorMessage = "String length cannot be longer than 50 characters.", MinimumLength = 1)]
         [Display(Name = "Last Name", Description = "Enter last name")]
-        //[RegularExpression()] - need worked with regular expression!!!
+        // Regular expression, that return all alphabetic and numeric symbols and symbols . and _, too.
+        [RegularExpression(@"^[\w\._]")]
         public string LastName { get; set; }
 
         // Students FirstMidName.

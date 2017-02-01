@@ -197,6 +197,7 @@ namespace Task_1.Migrations
                  }
             };
 
+            // Using lazy loading.
             foreach (Enrollment e in enrollments)
             {
                 var enrollmentInDataBase = context.Enrollments.Where(
